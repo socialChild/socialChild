@@ -1,0 +1,22 @@
+<html>
+    <h1>我們換網址囉！</h1>
+    <h3>新的網址為：https://lovebaby.sw.ntpc.gov.tw</h3>
+    <p>將在<span id="countdown">5</span>後為您連結到該網頁</p>
+</html>
+
+<script>
+
+    var counter = 5;
+    window.onload = function () {
+        var seconds = document.getElementById("countdown").textContent;
+        var countdown = setInterval(function() {
+            seconds--;
+            document.getElementById("countdown").textContent = seconds;
+
+            if (seconds == 0) {
+                window.location.replace("https://lovebaby.sw.ntpc.gov.tw")
+            }
+            if (seconds <= 0) clearInterval(countdown);
+        }, 1000);
+    }
+</script>
